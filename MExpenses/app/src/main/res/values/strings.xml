@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">M-Expenses</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="trip_01">Trip 01</string>
+    <string name="trip_02">Trip 02</string>
+    <string name="trip_03">Trip 03</string>
+    <string name="date">01/11/2021</string>
+    <string name="cambridge">Cambridge</string>
+    <string name="plane">Plane</string>
+    <string name="hyatt">Hyatt</string>
+    <string name="zero">0</string>
+    <string name="hint_date">Date</string>
+    <string name="hint_transport">Transport Expenses</string>
+    <string name="hint_hotel">Hotel Expenses</string>
+    <string name="hint_food">Food Expenses</string>
+    <string name="hint_other">Other Expenses</string>
+    <string name="edit_button">Edit Trip Button</string>
+    <string name="add_button">add</string>
+    <string name="exp_type">Type</string>
+    <string name="hint_type">transport/food/other</string>
+    <string name="exp_amount">Amount</string>
+    <string name="exp_date">Date</string>
+    <string name="update">Update</string>
+    <string name="delete">Delete</string>
+    <string name="update_record">Update Record</string>
+    <string name="enter_new_trip_details">Enter new trip details</string>
+</resources>
