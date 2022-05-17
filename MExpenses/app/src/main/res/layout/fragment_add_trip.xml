@@ -1,84 +1,143 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:tools="http://schemas.android.com/tools"
+<layout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/relativeLayout"
+        android:id="@+id/card_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:backgroundTint="@color/main_bg"
+        android:layout_margin="5dp"
+        app:cardBackgroundColor="#62B9FF"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="3dp"
+        app:contentPadding="30dp"
         android:padding="30dp">
 
-        <TextView
+        <com.google.android.material.textview.MaterialTextView
             android:id="@+id/header_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            style="@style/Widget.MaterialComponents.TextView"
             android:text="@string/enter_new_trip_details"
-            android:textSize="20sp"
+            android:textSize="25sp"
+            android:textStyle="bold"
             android:textColor="@color/black"
             android:gravity="center"
-            android:padding="5dp"
-            app:layout_constraintBottom_toTopOf="@+id/item_title"
+            app:layout_constraintBottom_toTopOf="@+id/item_title_layout"
             app:layout_constraintTop_toTopOf="parent" />
 
-
-        <EditText
-            android:id="@+id/item_title"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/item_title_layout"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:hint="Name"
-            android:padding="5dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/name"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_marginTop="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/header_title" />
+            app:layout_constraintTop_toBottomOf="@id/header_title">
 
-        <EditText
-            android:id="@+id/item_date"
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/item_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/exp_item_date_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="@string/date"
+            android:layout_marginTop="15dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/item_title_layout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/item_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/item_destination_layout"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:hint="Date"
-            android:padding="5dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/destination"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_marginTop="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/item_title" />
+            app:layout_constraintTop_toBottomOf="@id/exp_item_date_layout">
 
-        <EditText
-            android:id="@+id/item_destination"
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/item_destination"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:textSize="20sp"
+                android:layout_marginTop="15dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/exp_item_container" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/item_description_layout"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:hint="Destination"
-            android:padding="5dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/description"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_marginTop="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/item_date" />
+            app:layout_constraintTop_toBottomOf="@id/item_destination_layout">
 
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/item_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:textSize="20sp"
+                android:layout_marginTop="15dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/exp_item_container" />
 
-        <EditText
-            android:id="@+id/item_description"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:hint="Description"
-            android:padding="5dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/item_destination" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <CheckBox
+        <com.google.android.material.checkbox.MaterialCheckBox
             android:id="@+id/item_risk"
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:padding="5dp"
-            android:text="Requires risk assessment"
+            android:layout_marginTop="15dp"
+            android:text="@string/risk_assessment"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/item_description" />
-
+            app:layout_constraintTop_toBottomOf="@+id/item_description_layout" />
 
         <Button
             android:id="@+id/btnSave"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:paddingHorizontal="16dp"
-            android:text="Save"
+            android:layout_marginTop="15dp"
+            android:textSize="20sp"
+            android:text="@string/save"
+            style="@style/Widget.MaterialComponents.Button"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/item_risk" />
+            app:layout_constraintBottom_toBottomOf="parent"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
+
+

@@ -1,5 +1,8 @@
 package com.example.m_expenses.features.triplist
 
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
+import android.graphics.drawable.Drawable
 import android.os.Bundle
 import android.view.*
 import android.widget.Toast
@@ -69,13 +72,13 @@ class TripListFragment : Fragment(), OnTripClickListener {
         )
 
         val dialog = AlertDialog.Builder(requireContext())
-            .setTitle("Advanced search")
             .setView(dialogBinding.root)
             .setNegativeButton("Close") { dialogInterface, _ ->
                 dialogInterface.dismiss()
             }
             .create()
 
+        dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
         dialog.show()
 
 
