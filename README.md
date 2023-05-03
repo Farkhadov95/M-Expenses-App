@@ -1,6 +1,6 @@
 # M-Expenses-App
 
-This project was a created as a final project of my Mobile Application Development Module at University of Greenwich.
+This project was created as a final project of my Mobile Application Development Module at the University of Greenwich.
 
 COMP-1424 Mobile Application Development
 Coursework: M-Expenses Application
